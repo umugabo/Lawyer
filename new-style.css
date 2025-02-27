@@ -1,0 +1,155 @@
+/* new-style.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main Navigation Bar */
+.navbar {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.navbar-brand h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar .nav-tabs > li > a {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar .nav-tabs > li > a:hover {
+    color: #ffcc00;
+}
+
+/* Main Slider */
+#main-slider {
+    background-color: #333;
+    padding: 50px 0;
+}
+
+.carousel-content {
+    color: #fff;
+    font-size: 22px;
+}
+
+.carousel-content h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Features Section */
+.feature {
+    padding: 50px 0;
+    background-color: #e9ecef;
+}
+
+.feature .col-md-4 {
+    margin-bottom: 30px;
+}
+
+.feature h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.hi-icon-wrap {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hi-icon-wrap i {
+    font-size: 40px;
+    color: #0056b3;
+}
+
+.hi-icon-wrap h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+}
+
+.about .col-md-6 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about h2 {
+    font-size: 30px;
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+footer .social-network {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-network li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+footer .social-network li a {
+    font-size: 20px;
+    color: white;
+}
+
+footer .social-network li a:hover {
+    color: #ffcc00;
+}
+
+/* Contact Section */
+#conatcat-info {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+#conatcat-info .contact-info {
+    display: flex;
+    align-items: center;
+}
+
+#conatcat-info .contact-info i {
+    font-size: 50px;
+    color: #0056b3;
+}
+
+#conatcat-info .contact-info h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+#conatcat-info .contact-info p {
+    font-size: 18px;
+    color: #555;
+}
