@@ -232,13 +232,16 @@ document.getElementById("main-contact-form").addEventListener("submit", function
         window.location.href="thanks.html";
 
     })
-    .catch(function(error){
+.catch(function(error) {
 
-        console.log(error);
+    console.log("EmailJS Error:", error);
 
-        alert("Failed to send your message.\nPlease try again.");
+    alert(
+        "Status: " + error.status + "\n\n" +
+        "Text: " + error.text
+    );
 
-    });
+});
 
 });
 
