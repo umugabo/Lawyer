@@ -13,7 +13,12 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link href="css/prettyPhoto.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" />	
-
+<style>
+#contact-page label {
+    color: #222 !important;
+    font-weight: bold;
+}
+</style>
   </head>
   <body>
 	<header>		
@@ -220,7 +225,7 @@ document.getElementById("main-contact-form").addEventListener("submit", function
 
     emailjs.sendForm(
         "service_39i2vbr",
-        "template_gt1gnjl",
+        "template_qgtkdos",
         this
     )
     .then(function(){
@@ -232,16 +237,13 @@ document.getElementById("main-contact-form").addEventListener("submit", function
         window.location.href="thanks.html";
 
     })
-.catch(function(error) {
+    .catch(function(error){
 
-    console.log("EmailJS Error:", error);
+        console.log(error);
 
-    alert(
-        "Status: " + error.status + "\n\n" +
-        "Text: " + error.text
-    );
+        alert("Failed to send your message.\nPlease try again.");
 
-});
+    });
 
 });
 
