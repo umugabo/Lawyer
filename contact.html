@@ -122,7 +122,8 @@
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="thanks.html">
+                <!-- <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="thanks.html"> -->
+					<form id="main-contact-form" class="contact-form"></form>
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label>Name *</label>
@@ -134,12 +135,16 @@
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="number" class="form-control">
+                            <input type="text" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Company Name</label>
-                            <input type="text" class="form-control">
-                        </div>                        
+                            <input type="text" name="company" class="form-control">
+                        </div>  
+						<div class="form-group">
+    					<label>Title</label>
+						<input type="text" name="title" class="form-control" required>
+					</div>                      
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
@@ -199,8 +204,46 @@
     <script src="js/jquery.isotope.min.js"></script>  
 	<script src="js/wow.min.js"></script>
 	<script src="js/functions.js"></script>
+
+	<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init({
+    publicKey: "tUqncozgW2JF-5xQr"
+});
+
+document.getElementById("main-contact-form").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_39i2vbr",
+        "template_gt1gnjl",
+        this
+    )
+    .then(function(){
+
+        alert("Thank you for contacting SA Kigali Advocates.\n\nYour message has been sent successfully.");
+
+        document.getElementById("main-contact-form").reset();
+
+        window.location.href="thanks.html";
+
+    })
+    .catch(function(error){
+
+        console.log(error);
+
+        alert("Failed to send your message.\nPlease try again.");
+
+    });
+
+});
+
+</script>
 	
   </body>
 
 </html>
-
